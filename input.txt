@@ -1,0 +1,18 @@
+# process_text.py
+
+# Read input file
+with open('input.txt', 'r') as input_file:
+    content = input_file.read()
+
+# Count words (split by whitespace)
+word_count = len(content.split())
+
+# Convert to uppercase
+uppercase_content = content.upper()
+
+# Write to output file
+with open('output.txt', 'w') as output_file:
+    output_file.write(uppercase_content)
+    output_file.write(f"\n\nTotal words: {word_count}")
+
+print("Success! Processed text written to output.txt")
